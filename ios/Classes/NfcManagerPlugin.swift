@@ -724,7 +724,8 @@ private func convert(_ value: NFCNDEFTag, _ completionHandler: @escaping (TagPig
   if let value = value as? NFCFeliCaTag {
     pigeon.feliCa = FeliCaPigeon(
       currentSystemCode: FlutterStandardTypedData(bytes: value.currentSystemCode),
-      currentIDm: FlutterStandardTypedData(bytes: value.currentIDm)
+      currentIDm: FlutterStandardTypedData(bytes: value.currentIDm),
+      manufacturerParameter: FlutterStandardTypedData(bytes: value.manufacturerParameter)
     )
   }
   else if let value = value as? NFCISO15693Tag {

@@ -97,9 +97,11 @@ final class FeliCaPigeon {
   const FeliCaPigeon({
     required this.currentSystemCode,
     required this.currentIDm,
+    required this.manufacturerParameter,
   });
   final Uint8List currentSystemCode;
   final Uint8List currentIDm;
+  final Uint8List manufacturerParameter;
 }
 
 final class Iso15693Pigeon {
