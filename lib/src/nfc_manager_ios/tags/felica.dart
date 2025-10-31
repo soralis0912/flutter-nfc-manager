@@ -11,6 +11,7 @@ final class FeliCaIos {
     this._handle, {
     required this.currentSystemCode,
     required this.currentIDm,
+    required this.manufacturerParameter,
   });
 
   final String _handle;
