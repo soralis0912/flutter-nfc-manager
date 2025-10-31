@@ -21,6 +21,9 @@ final class FeliCaIos {
   // DOC:
   final Uint8List currentIDm;
 
+  // DOC:
+  final Uint8List manufacturerParameter;
+
   /// Creates an instance of this class for the given tag.
   ///
   /// Returns null if the tag is not compatible.
@@ -33,6 +36,7 @@ final class FeliCaIos {
       data.handle,
       currentSystemCode: tech.currentSystemCode,
       currentIDm: tech.currentIDm,
+      manufacturerParameter: tech.manufacturerParameter,
     );
   }
 
