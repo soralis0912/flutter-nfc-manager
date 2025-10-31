@@ -12,6 +12,7 @@ final class NfcFAndroid {
   const NfcFAndroid._(
     this._handle, {
     required this.tag,
+    required this.idm,
     required this.manufacturer,
     required this.systemCode,
   });
@@ -20,6 +21,9 @@ final class NfcFAndroid {
 
   /// The tag instance backing of this instance.
   final NfcTagAndroid tag;
+
+  // DOC:
+  final Uint8List idm;
 
   // DOC:
   final Uint8List manufacturer;
@@ -39,6 +43,7 @@ final class NfcFAndroid {
     return NfcFAndroid._(
       data.handle,
       tag: atag,
+      idm: Uint8List.fromList(data.id),
       manufacturer: tech.manufacturer,
       systemCode: tech.systemCode,
     );
